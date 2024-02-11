@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+        double itemPrice = 0;
+        System.out.print("Enter your item's price: ");
+
+        if(in.hasNextDouble())
+        {
+            itemPrice = in.nextDouble();
+            in.nextLine();
+            System.out.println("\nYou said your item's price was: " +itemPrice);
+        }
+        if(itemPrice >= 100) {
+            System.out.println("\nSince your item's price is at least $100 your shipping is free!");
+            System.out.println("Your total price is: $" + itemPrice);
+        }
+        else
+        {
+            double shippingCost;
+            double totalCost;
+            shippingCost = itemPrice * .02;
+            System.out.println("\nSince your item's price is below $100 your shipping cost is: $" +shippingCost);
+            totalCost = shippingCost + itemPrice;
+            System.out.println("Your total price is: $" + totalCost);
+        }
+
+    }
+}

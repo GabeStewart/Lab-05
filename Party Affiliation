@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+        String partyAff;
+
+        System.out.print("Enter your party (D, R, I, or other): ");
+        partyAff = in.nextLine();
+
+        if (partyAff.equalsIgnoreCase("D"))
+        {
+            System.out.println("\nYou get a Democratic Donkey.");
+        }
+        else if (partyAff.equalsIgnoreCase("R"))
+        {
+            System.out.println("\nYou get a Republican Elephant.");
+        }
+        else if (partyAff.equalsIgnoreCase("I"))
+        {
+            System.out.println("\nYou get a Independent Person.");
+        }
+        else
+        {
+            System.out.println("\nYou get a Other Something");
+        }
+    }
+}
